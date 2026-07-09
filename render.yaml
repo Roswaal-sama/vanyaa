@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: vanyaa-gauntlet-api
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/public-state
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: CRM_LOGIN_CODE
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT_JSON
+        sync: false
+      - key: FIREBASE_COLLECTION
+        value: vanyaa
+      - key: FIREBASE_DOC
+        value: tournamentState

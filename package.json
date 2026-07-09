@@ -1,0 +1,16 @@
+{
+  "name": "vanyaa-gauntlet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VANYAA Valorant gauntlet platform with public player arena, private CRM, and optional Firebase persistence.",
+  "scripts": {
+    "start": "node backend/server.js",
+    "check": "node --check backend/server.js && node --check user/user.js && node --check crm/crm.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0"
+  }
+}
